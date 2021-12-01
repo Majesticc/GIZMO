@@ -44,7 +44,7 @@ BOX_SPATIAL_DIMENSION=3    # sets number of spatial dimensions evolved (default=
 # --------------------------------------- Hydro solver method
 ####################################################################################################
 # --------------------------------------- Finite-volume Godunov methods (choose one, or SPH)
-#HYDRO_MESHLESS_FINITE_MASS     # solve hydro using the mesh-free Lagrangian (fixed-mass) finite-volume Godunov method
+HYDRO_MESHLESS_FINITE_MASS     # solve hydro using the mesh-free Lagrangian (fixed-mass) finite-volume Godunov method
 #HYDRO_MESHLESS_FINITE_VOLUME   # solve hydro using the mesh-free (quasi-Lagrangian) finite-volume Godunov method (control mesh motion with HYDRO_FIX_MESH_MOTION)
 #HYDRO_REGULAR_GRID             # solve hydro equations on a regular (recti-linear) Cartesian mesh (grid) with a finite-volume Godunov method
 ## -----------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ BOX_SPATIAL_DIMENSION=3    # sets number of spatial dimensions evolved (default=
 ## ----------------------------------------------------------------------------------------------------
 # --------------------------------------- Gas (or Material) Equations-of-State [some EOS options for specific regimes, like galaxy or star formation simulations, are also described in the blocks below for those sections]
 #EOS_GAMMA=(5.0/3.0)            # Polytropic Index of Gas (for an ideal gas law): if not set and no other (more complex) EOS set, defaults to GAMMA=5/3
-#EOS_HELMHOLTZ                  # Use Timmes & Swesty 2000 EOS (for e.g. stellar or degenerate equations of state); if additional tables needed, download at http://www.tapir.caltech.edu/~phopkins/public/helm_table.dat (or the BitBucket site)
+EOS_HELMHOLTZ                  # Use Timmes & Swesty 2000 EOS (for e.g. stellar or degenerate equations of state); if additional tables needed, download at http://www.tapir.caltech.edu/~phopkins/public/helm_table.dat (or the BitBucket site)
 #EOS_TILLOTSON                  # Use Tillotson (1962) EOS (for solid/liquid+vapor bodies, impacts); custom EOS params can be specified or pre-computed materials used. see User Guide and Deng et al., arXiv:1711.04589
 #EOS_ELASTIC                    # treat fluid as elastic or plastic (or visco-elastic) material, obeying Hooke's law with full stress terms and von Mises yield model. custom EOS params can be specified or pre-computed materials used.
 ## -----------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ BOX_SPATIAL_DIMENSION=3    # sets number of spatial dimensions evolved (default=
 ## ----------------------------------------------------------------------------------------------------
 # -------------------------------------- Conduction
 # ----------------------------------------- [Please cite and read the methods paper Hopkins 2017, MNRAS, 466, 3387]
-#CONDUCTION                     # Thermal conduction solved *explicitly*: isotropic if MAGNETIC off, otherwise anisotropic
+CONDUCTION                     # Thermal conduction solved *explicitly*: isotropic if MAGNETIC off, otherwise anisotropic
 #CONDUCTION_SPITZER             # Spitzer conductivity accounting for saturation: otherwise conduction coefficient is constant  [cite Su et al., 2017, MNRAS, 471, 144, in addition to the conduction methods paper above].  Requires COOLING to calculate local thermal state of gas.
 ## ----------------------------------------------------------------------------------------------------
 # -------------------------------------- Viscosity
